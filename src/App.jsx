@@ -5,6 +5,7 @@ import ImageComponent from "./components/ImageComp/ImageComponent";
 import FeaturedComponent from "./components/Featured/FeaturedComponent";
 import axios from "axios";
 import "./App.css";
+import { Grid } from "semantic-ui-react";
 import SideBarComponent from "./components/Sidebar/SideBarComponent";
 
 function App() {
@@ -24,20 +25,31 @@ function App() {
     return <h3>Loading...</h3>;
   } else {
     return (
-      <div className="App">
-        <HeroComponent img={nasaData.url} />
-
-        <ImageComponent img={nasaData.url} />
-        <ImageComponent img={nasaData.url} />
-        <ImageComponent img={nasaData.url} />
+      <Grid celled>
         <NavComponent />
-        <FeaturedComponent
-          date={nasaData.date}
-          explanation={nasaData.explanation}
-        />
+        <Grid.Row>
+          <Grid.Column width={3}>
+            <ImageComponent img={nasaData.url} />
+            <ImageComponent img={nasaData.url} />
+          </Grid.Column>
 
-        <SideBarComponent />
-      </div>
+          <Grid.Column width={13}>
+            <HeroComponent img={nasaData.url} />
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column width={10}>
+            <FeaturedComponent
+              date={nasaData.date}
+              explanation={nasaData.explanation}
+            />
+          </Grid.Column>
+          <Grid.Column width={6}>
+            <SideBarComponent date={nasaData.date} />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
   }
 }

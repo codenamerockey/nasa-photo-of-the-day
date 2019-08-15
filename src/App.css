@@ -19,6 +19,28 @@
   color: white;
 }
 
+
+
+#root>div>div:nth-child(2)>div.thirteen.wide.column>div>div {
+  margin-left: 50px;
+}
+
+
+.ui.celled.grid {
+  margin-top: 0px;
+}
+
+.ui.menu {
+  background: #282c34;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.item {
+  margin: 0 30px;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -27,6 +49,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

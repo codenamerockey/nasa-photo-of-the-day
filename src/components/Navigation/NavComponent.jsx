@@ -1,26 +1,26 @@
 import React from "react";
+import { Button, Menu } from "semantic-ui-react";
 
 function NavComponent() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="#">Planets</a>
-        </li>
-        <li>
-          <a href="#">Visit Space</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <Menu>
+      <Menu.Item>
+        <Button primary>Home</Button>
+      </Menu.Item>
+
+      <Menu.Item>
+        <Button>About</Button>
+      </Menu.Item>
+      <Menu.Item>
+        <Button>Visit Space</Button>
+      </Menu.Item>
+      <Menu.Item>
+        <Button>Black Holes</Button>
+      </Menu.Item>
+      <Menu.Item>
+        <Button>Contact</Button>
+      </Menu.Item>
+    </Menu>
   );
 }
 
