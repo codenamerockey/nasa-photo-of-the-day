@@ -1,11 +1,14 @@
 import React from "react";
-import { Button, Menu } from "semantic-ui-react";
+import { Button, Menu, Icon } from "semantic-ui-react";
 
 function NavComponent() {
   return (
     <Menu>
       <Menu.Item>
-        <Button primary>Home</Button>
+        <Button icon labelPosition="right">
+          Nasa
+          <Icon name="space shuttle" />
+        </Button>
       </Menu.Item>
 
       <Menu.Item>
