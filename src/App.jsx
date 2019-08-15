@@ -12,16 +12,16 @@ import SideBarComponent from "./components/Sidebar/SideBarComponent";
 function App() {
   const [nasaData, setNasaData] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-  //     .then(res => {
-  //       const nasaImg = res.data;
-  //       const nasaData = res.data;
-  //       console.log(nasaData);
-  //       setNasaData(nasaImg);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+      .then(res => {
+        const nasaImg = res.data;
+        const nasaData = res.data;
+        console.log(nasaData);
+        setNasaData(nasaImg);
+      });
+  }, []);
   if (!nasaData) {
     return <h3>Loading...</h3>;
   } else {
