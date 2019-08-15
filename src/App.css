@@ -19,6 +19,39 @@
   color: white;
 }
 
+#root>div>div:nth-child(2)>div.thirteen.wide.column>div>div>img {
+  object-fit: cover;
+}
+
+#root>div>div:nth-child(2)>div.thirteen.wide.column>div>div {
+  margin-left: 50px;
+
+}
+
+#root>div>footerdiv {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.ui.celled.grid {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.ui.menu {
+  background: #282c34;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.item {
+  margin: 0 30px;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -27,6 +60,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
