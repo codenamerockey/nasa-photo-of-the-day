@@ -20,27 +20,26 @@ function App() {
         setNasaData(nasaImg);
       });
   }, []);
+  if (!nasaData) {
+    return <h3>Loading...</h3>;
+  } else {
+    return (
+      <div className="App">
+        <HeroComponent img={nasaData.url} />
 
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-      <HeroComponent img={nasaData.url} />
+        <ImageComponent img={nasaData.url} />
+        <ImageComponent img={nasaData.url} />
+        <ImageComponent img={nasaData.url} />
+        <NavComponent />
+        <FeaturedComponent
+          date={nasaData.date}
+          explanation={nasaData.explanation}
+        />
 
-      <ImageComponent img={nasaData.url} />
-      <ImageComponent img={nasaData.url} />
-      <ImageComponent img={nasaData.url} />
-      <NavComponent />
-      <FeaturedComponent
-        date={nasaData.date}
-        explanation={nasaData.explanation}
-      />
-
-      <SideBarComponent />
-    </div>
-  );
+        <SideBarComponent />
+      </div>
+    );
+  }
 }
 
 export default App;
